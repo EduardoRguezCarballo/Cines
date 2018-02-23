@@ -34,6 +34,10 @@ $(document).ready(function () {
 		$('#TbPuntos').val("");
 		$('#tituloPelicula').val("");
 		$('#TbLocalidad').val("");
+		$('#TbNombre').removeAttr("Style");
+		$('#TbTelefono').removeAttr("Style");
+		$('#TbEmail').removeAttr("Style");
+		$('#TbPuntos').removeAttr("Style");
 	});
 
 	$('.titulo1').on('click', function () {
@@ -232,22 +236,54 @@ function rellenarInformacion(elementoElegido) {
 }
 
 function guardarLocalStorage() {
+	var validar = true;
 	var nombre = $('#TbNombre').val();
 	var telefono = $('#TbTelefono').val();
 	var email = $('#TbEmail').val();
 	var puntos = parseInt($('#TbPuntos').val());
 	var Npelicula = $('#tituloPelicula').text();
 
-	//compruebo los datos
-	if (puntos > 0 && puntos < 11) {
+	$('#TbNombre').removeAttr("Style");
+	$('#TbTelefono').removeAttr("Style");
+	$('#TbEmail').removeAttr("Style");
+	$('#TbPuntos').removeAttr("Style");
+
+	if (nombre == "") {
+		mensaje("Nombre erroneo", "Resvisa el campo nombre");
+		$('#TbNombre').attr('Style', 'background-Color: rgba(255,0,0,0.7); border: 2px solid red')
+		$('#TbNombre').focus();
+		validar = false;
+	}
+
+	if (telefono == "" || telefono.length < 9) {
+		mensaje("Telefono incorrecto", "Resvisa el campo Telefono");
+		$('#TbTelefono').attr('Style', 'background-Color: rgba(255,0,0,0.7); border: 2px solid red')
+		$('#TbTelefono').focus();
+		validar = false;
+	}
+
+	if (email.indexOf('@') == -1) {
+		mensaje("Email incorrecto", "Resvisa el campo Email");
+		$('#TbEmail').attr('Style', 'background-Color: rgba(255,0,0,0.7); border: 2px solid red')
+		$('#TbEmail').focus();
+		validar = false;
+	}
+
+	if (puntos < 1 || puntos > 10) {		
+		mensaje("Puntos incorrectos del 1 al 10", "Resvisa la puntuación");
+		$('#TbPuntos').attr('Style', 'background-Color: rgba(255,0,0,0.7); border: 2px solid red')
+		$('#TbPuntos').focus();
+		validar = false;
+	}
+
+	//c	ompruebo los datos
+	if (validar) {
 		if (localStorage.getItem('Votacionpelicula') != null) {
 			localStorage.setItem('Votacionpelicula', localStorage.getItem('Votacionpelicula') + Npelicula + ";" + nombre + ";" + telefono + ";" + email + ";" + puntos + "/");
 		} else {
 			localStorage.setItem('Votacionpelicula', Npelicula + ";" + nombre + ";" + telefono + ";" + email + ";" + puntos + "/");
 		}
 		google.charts.setOnLoadCallback(dibujar);
-	} else {
-		alert("Datos mal introducidos \n Puntos de: 1-10");
 	}
 }
 
@@ -377,4 +413,13 @@ function compruebaInfo() {
 	mostrar[7] = pelicula8;
 	mostrar[8] = pelicula9;
 	mostrar[9] = pelicula10;
+}
+
+function mensaje(cabecera, texto) {
+	$.toast({
+		heading: cabecera,
+		text: texto,
+		loader: true,
+		loaderBg: 'red'
+	});
 }
