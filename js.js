@@ -245,7 +245,7 @@ function guardarLocalStorage() {
 	var nombre = $('#TbNombre').val();
 	var telefono = $('#TbTelefono').val();
 	var email = $('#TbEmail').val();
-	var puntos = parseInt($('#TbPuntos').val());
+	var puntos = $('#TbPuntos').val();
 	var Npelicula = $('#tituloPelicula').text();
 
 	$('#TbNombre').removeAttr("Style");
@@ -274,12 +274,19 @@ function guardarLocalStorage() {
 		validar = false;
 	}
 
-	if (puntos < 1 || puntos > 10) {		
+	if (puntos == "") {		
 		mensaje("Puntos incorrectos del 1 al 10", "Resvisa la puntuación");
 		$('#TbPuntos').attr('Style', 'background-Color: rgba(255,0,0,0.7); border: 2px solid red')
 		$('#TbPuntos').focus();
 		validar = false;
-	}
+	}else{
+		if (parseInt(puntos) < 1 || parseInt(puntos) > 10) {		
+			mensaje("Puntos incorrectos del 1 al 10", "Resvisa la puntuación");
+			$('#TbPuntos').attr('Style', 'background-Color: rgba(255,0,0,0.7); border: 2px solid red')
+			$('#TbPuntos').focus();
+			validar = false;
+		}
+	}	
 
 	//c	ompruebo los datos
 	if (validar) {
@@ -295,7 +302,7 @@ function guardarLocalStorage() {
 function dibujar() {
 	var data = new google.visualization.DataTable();
 	compruebaInfo();
-	var select = $('#eleccion')[0];
+	
 
 	$('#formulario').hide();
 	$('#charts')[0].style.display = "block";
@@ -306,7 +313,7 @@ function dibujar() {
 
 	var opciones = {
 		'title': 'Puntuaciones:',
-		'width': '600',
+		'width': '300',
 		'height': '300'
 	};
 
@@ -321,7 +328,8 @@ function dibujar() {
 	}
 
 	var chart;
-
+	
+	var select = $('.tipografica')[0].value;
 	if (select == 1) {
 		chart = new google.visualization.AreaChart(document.getElementById('charts'));
 	} else {

@@ -224,12 +224,9 @@ body{
 .tituloA{
 	text-align: center;
 	padding: 5px;
-	background-color: dodgerblue;
-	border: 0.5px solid;
-}
-
-.tituloA:nth-child(5){
-	background-color: green;
+	background-color: #1A2A40;
+	border: 0.5px solid black;
+	color: white;
 }
 
 .acordeon div{
@@ -276,7 +273,7 @@ body{
 	margin-bottom: 10px;
 }
 
-.dos > form{
+.dos > #formulario{
 	display: flex;
 	justify-content:space-around;
 	flex-wrap: wrap;
@@ -285,10 +282,10 @@ body{
 
 .dos .columna{
 	width: 40%;
-	min-width: 150px;
+	min-width: 200px;
 	background-color: rgba(0,0,0,0.1);
 	border: none;
-    margin: 10px auto;
+    margin: 5px auto;
 }
 
 .dos .columna input{
@@ -306,16 +303,6 @@ body{
 
 *{
 	font-weight: normal;
-}
-
-.tres > a{
-	text-align: center;
-	display: block;
-	background-color: red;
-	padding: 9px;
-	border-radius: 6px;
-	text-decoration: none;
-	color: white;
 }
 
 #MostrarHorarios{
@@ -347,8 +334,28 @@ iframe{
 	overflow: hidden;
 }
 
-ifram > *{
-	display: block;	
-	width: 250px;
-	overflow: hidden;
-} 
+.uno, .dos, .tres{
+	background-color: #EBF4F7;
+}
+
+#redireccion, #BtnGuardar{
+	width: 50%;
+	margin: auto;
+	background-color: #2474A6;
+	text-align: center;
+	display: block;
+	border-radius: 6px;
+	text-decoration: none;
+	color: white;
+	padding: 5px;
+}
+
+#redireccion:hover, #BtnGuardar:hover{
+	border:2px solid #2474A6;
+	background-color: #EBF4F7;
+	color:#2474A6;
+}
+
+#BtnGuardar{
+	margin-top: 10px;
+}

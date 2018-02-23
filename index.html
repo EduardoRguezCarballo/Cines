@@ -69,17 +69,17 @@
 							<input type="email" required id="TbEmail" class="leer">
 							<br>
 							<label class="estilosLetra" title="Introduzca su valoacion del 0 al 10" for="TbPuntos">Puntos</label><br>
-							<input type="number" min="1" max="10" required id="TbPuntos" class="leer">
+							<input type="number" min="1" max="10" required id="TbPuntos" class="leer" value=1>
 						</div>
 
 						<div class="columna item3">
 
-							<select name="Elige Tipo de grafica" id="" title="leige tipo de grafica" tabindex="0" id="eleccion">
+							<select name="Elige Tipo de grafica" id="" title="leige tipo de grafica" tabindex="0" id="eleccion" class="tipografica">
                                 <option value="1" tabindex="0">PieChart</option>
                                 <option value="2" tabindex="0">AreaChart</option>
                             </select><br>
 
-							<input type="button" id="BtnGuardar" value="Guardar Voto" class="leer">
+							<input type="button" id="BtnGuardar" value="Votar!" class="leer">
 						</div>
 					</div>
 					<div id="charts" class="leer" style="display: none">
@@ -99,7 +99,7 @@
 
 	<div class="cabecera sombra" id="cabeza">		
 		<div class="titulo estilosLetra" tabindex="1">
-			<img id="logo" src="img/logotipo.svg" alt="logo"> 
+			<img id="logo" src="img/logotipo.svg" alt="logo">
 			<a href="index.html" class="leer">Cines El Almendro</a>
 		</div>
 		<div class="nav">
