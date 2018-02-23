@@ -80,24 +80,51 @@ body{
 .cartelera > .cartel{
 	position: relative;
  	width: 250px;
+	margin: 5px;
+	border:2px solid black;
 }
 
-.cartelera > .cartel >div > h3{
+.cartelera > .cartel > h3{
 	position: absolute;
 	top: 0px;
 	left: 0px;
 	width: 100%;
-	background-color: black;
+	background-color: rgba(94, 26, 45,0.6);
 	color: white;
 	padding-left: 5px;
+	padding: 5px;
 }
 
-.cartelera .cartel > div > img{
+.cartelera .cartel > img{
 	width: 100%;
+	max-height: 300px;
+}
+
+.cartelera .cartel> h4{
+	margin-left: 10px;
+}
+
+.cartelera .cartel > ul{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	list-style: none;
+	align-items: center;
+}
+
+.cartelera .cartel > ul> li, .cartelera .cartel input{
+	padding: 0px 10px;
+	background-color: aliceblue;
+	border-radius: 5px;	
+	margin-bottom: 5px;
+	padding-bottom: 4px;
 }
 
 .cartelera .cartel input{
-
+	width: 100%;
+	padding:10px;
+	margin: 0;
+	border-radius: 0;
 }
 
 .informacion{
