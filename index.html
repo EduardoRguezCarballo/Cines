@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cines El Almentro</title>
+
+	<!-- fuentes -->
+	<link href="https://fonts.googleapis.com/css?family=Pacifico|Source+Sans+Pro" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Amita|Merienda" rel="stylesheet">
+
+	<!-- estilos -->
+	<link rel="stylesheet" href="estilo.css">
+
+	<!-- js -->
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+	<script src="js.js"></script>
+</head>
+
+<body>
+
+	<div class="informacion" style="display: none">
+		<div class="bloque_dato sombra">
+			<div class="infoCabecera sombra leer" tabindex="0">
+				<h2 tabindex="0" id="tituloPelicula" class="estilosLetra leer"></h2>
+				<a class="BtnCerrar" title="Cerrar panel">
+				    <img src="img/cerrar.png" alt="Cerrar Panel" title="Cerrar panel" tabindex="0">
+				</a>
+			</div>
+
+			<div class="acordeon">
+				<!-- creo los 3  bloques del acordeon -->
+				<h3 class="titulo1 tituloA estilosLetra leer" tabindex="0">Datos de la Pelicula</h3>
+
+				<div class="uno">
+					<img id="cartel" src="" alt="" />
+					<p class="info" title="Información de la pelicula">
+						<span tabindex="0" class="oscuro">Trailer:</span><br>
+						<img tabindex="0" id="CuadroImg" src="img/video.PNG" alt="Ver Trailer en youtube"><br>
+						<span tabindex="0" class="oscuro">Director:</span> <span class="leer" id="CuadroDirector"></span><br>
+						<span tabindex="0" class="oscuro">Reparto:</span> <span class="leer" id="CuadroReparto"></span><br>
+						<span tabindex="0" class="oscuro">Género:</span> <span class="leer" id="CuadroGenero"></span><br>
+						<span tabindex="0" class="oscuro">Duración:</span> <span class="leer" id="CuadroDuracion"></span><br>
+						<span tabindex="0" class="oscuro">Estreno</span> <span class="leer" id="CuadroEstreno"></span><br>
+						<span tabindex="0" class="oscuro">Sinopsis:</span> <span class="leer" id="CuadroSinopsis"></span>
+					</p>
+				</div>
+
+				<h3 class="titulo2 tituloA estilosLetra leer">Valorar Pelicula</h3>
+
+				<div class="dos">
+					<h2 class="estilosLetra leer">Sorteo De 2 Entradas Gratis</h2>
+					<h2 class="subtitulo estilosLetra leer">Valora la Película y entra en el sorteo</h2>
+					<div id="formulario">
+						<div class="columna item1">
+							<label class="estilosLetra" title="Introduzca un nombre" for="TbNombre">Nombre</label><br>
+							<input type="text" required id="TbNombre" pattern="[A-Za-z]{100}" title="Nombre" class="leer"><br>
+							<label class="estilosLetra" title="Introduzca un telefono" for="TbTelefono" class="leer">Teléfono</label><br>
+							<input type="tel" id="TbTelefono" pattern="[0-9]{9}" class="leer"><br>
+						</div>
+
+						<div class="columna item2">
+							<label class="estilosLetra" title="Introduzca un email" for="TbEmail">Email</label><br>
+							<input type="email" required id="TbEmail" class="leer">
+							<br>
+							<label class="estilosLetra" title="Introduzca su valoacion del 0 al 10" for="TbPuntos">Puntos</label><br>
+							<input type="number" min="1" max="10" required id="TbPuntos" class="leer">
+						</div>
+
+						<div class="columna item3">
+
+							<select name="Elige Tipo de grafica" id="" title="leige tipo de grafica" tabindex="0" id="eleccion">
+                                <option value="1" tabindex="0">PieChart</option>
+                                <option value="2" tabindex="0">AreaChart</option>
+                            </select><br>
+
+							<input type="button" id="BtnGuardar" value="Guardar Voto" class="leer">
+						</div>
+					</div>
+					<div id="charts" class="leer" style="display: none">
+
+					</div>
+				</div>
+
+				<h3 class="titulo3 tituloA estilosLetra leer">Reservar Entradas</h3>
+
+				<div class="tres leer">
+					<a href="index.html">Elegir Butacas</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="cabecera sombra" id="cabeza">
+		<div class="titulo estilosLetra" tabindex="1">
+			<a href="index.html" class="leer">
+				<h1>Cines El Almendro</h1>
+			</a>
+		</div>
+		<div class="nav">
+			<a href="index.html" class="estilosLetra leer" tabindex="0">Inicio</a>
+			<a href="index.html" class="estilosLetra leer" tabindex="0">Cartelera</a>
+			<a href="index.html" class="estilosLetra leer" tabindex="0">Información</a>
+		</div>
+	</div>
+
+	<div class="cartelera">
+		<div class="cartel sombra estilosLetra">
+			<div>
+				<img src="img/dando-la-nota-3.jpg" alt="Dando la nota">
+				<h3 tabindex="0">Dando La Nota</h3>
+			</div>
+			<div>
+				<h4>Horários</h4>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<input id="Dando La Nota" class="botonMotrar" type="submit" value="Mas información" tabindex="0">
+		</div>
+		
+	</div>
+</body>
+</html>

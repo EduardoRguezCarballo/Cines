@@ -1,0 +1,241 @@
+/*
+Colores Primarios:
+plata   ->  #F8F8F8
+vino    ->  #5E1A2D
+naranja ->  #FFB500 
+*/
+
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	<!-- scroll-behavior: smooth;-->
+}
+
+body{
+	background-color: rgba(255,181,0,0.8);
+}
+
+.sombra{
+	<!--sombras-->
+	-webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+}
+
+.estilosLetra{
+	font-family: 'Pacifico', cursive;
+}
+
+.cabecera{	
+	background-color:  #5E1A2D;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 10px;
+	justify-content:center;
+}
+
+.cabecera .titulo{
+	width: 400px;
+	text-align: center;
+}
+
+.titulo a{
+	color: 	#FFB500;
+	text-decoration: none;
+	letter-spacing: 2px;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+.cabecera .nav{
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.cabecera .nav a{
+	margin: 5px;
+	border-radius: 5px;
+	text-decoration: none;
+	width: 100px;   
+    border: 2px solid #F8F8F8;
+    color: #FFB500;
+    padding: 5px;
+}
+
+.cabecera .nav a:nth-child(2){¡
+	border: 2px solid;    
+    background-color: rgba(255,255,255,0.85);
+    border: 2px solid #FFB500;
+    color: black;
+}
+
+.cartelera{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 5px;
+	justify-content: center;
+}
+
+.cartelera > .cartel{
+	position: relative;
+ 	width: 250px;
+}
+
+.cartelera > .cartel >div > h3{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	background-color: black;
+	color: white;
+	padding-left: 5px;
+}
+
+.cartelera .cartel > div > img{
+	width: 100%;
+}
+
+.cartelera .cartel input{
+
+}
+
+.informacion{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.informacion .bloque_dato{
+	width: 90%;
+	max-width: 800px;
+	margin: 5px auto;
+	background-color: white;
+	padding: 10px;	
+	border: 2px solid black;
+}
+
+.infoCabecera {
+	position: relative;
+	background-color: #FFB500;
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 10px;
+}
+
+.informacion .bloque_dato h2{
+	text-align: center;	
+	width: 95%;
+	padding: 5px;
+}
+
+#charts *{
+	border: none;
+	padding: 0;
+}
+
+#charts{
+	overflow: hidden;
+	padding: 0;	
+}
+
+.informacion .BtnCerrar{
+	width: 50px;
+	height: 50px;
+	float: right;
+	right: 0%;
+	top: 0%;
+	padding: 5px;
+	position: absolute;
+}
+
+.BtnCerrar img{
+	width: 100%;
+	height: 100%;
+}
+
+.tituloA{
+	text-align: center;
+	padding: 5px;
+	background-color: dodgerblue;
+	border: 0.5px solid;
+}
+
+.tituloA:nth-child(5){
+	background-color: green;
+}
+
+.acordeon div{
+	border: 2px solid;
+	padding: 15px;
+}
+
+.uno{
+	display: flex;
+}
+
+.uno > * {
+	margin: auto;
+}
+
+.uno > img{
+	width: 130px;
+	height: 230px;
+}
+
+.uno > p{
+	width: 70%;
+	text-align: justify;
+}
+
+.oscuro{
+	font-weight: bold;
+}
+.dos{
+	text-align: center;
+}
+
+.dos > h2{
+	font-size: 2em;
+	width: 100%;
+	margin: auto;
+}
+
+.dos .subtitulo{
+	font-size: 20px;
+	margin-top: -20px;
+	color: darkslategray;
+	margin-bottom: 10px;
+}
+
+.dos > form{
+	display: flex;
+	justify-content:space-around;
+	flex-wrap: wrap;
+	margin-bottom: 15px;
+}
+
+.dos .columna{
+	width: 40%;
+	min-width: 150px;
+	background-color: rgba(0,0,0,0.1);
+	border: none;
+    margin: 10px auto;
+}
+
+.dos .columna input{
+	width: 70%;
+	margin-bottom: 5px;
+}
+
+#BtnGuardar{
+	margin-top: 10px;
+	padding: 10px;
+	background-color: darkgreen;
+	color: white;
+	border: none;
+}
+
+*{
+	font-weight: normal;
+}
