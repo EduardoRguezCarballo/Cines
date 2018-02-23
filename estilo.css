@@ -327,5 +327,28 @@ body{
 	width: 20px;
 	margin-right: 10px;
 	-moz-transform-origin: 0 0;
-       -webkit-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
 }
+
+#imagenCartel{
+	width: 100%;
+	max-width: 250px;
+}
+
+#CuadroImg{
+	display: block;	
+	width: 250px;
+	overflow: hidden;
+}
+
+iframe{
+	display: block;	
+	width: 250px;
+	overflow: hidden;
+}
+
+ifram > *{
+	display: block;	
+	width: 250px;
+	overflow: hidden;
+} 

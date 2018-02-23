@@ -227,7 +227,7 @@ function rellenarInformacion(elementoElegido) {
 		if (dato[i].titulo == elementoElegido.id) {
 			$('.informacion #tituloPelicula').text(dato[i].titulo);
 			$('.informacion #tituloPelicula')[0].setAttribute('tabindex', 0);
-			$('.acordeon #cartel')[0].src = "img/" + dato[i].imagen;
+			$('.acordeon #imagenCartel')[0].src = "img/" + dato[i].imagen;
 			$('.acordeon #CuadroImg')[0].innerHTML = dato[i].trailer;
 			$('#CuadroDirector').text(dato[i].director);
 			$('.acordeon #CuadroReparto').text(dato[i].Reparto);
