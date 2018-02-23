@@ -65,6 +65,10 @@ $(document).ready(function () {
 	$('#eleccion').on('change', function () {
 		select = $(this).val();
 	});
+	
+	$('#redireccion').on('click', function(){
+		localStorage.setItem('bloque',$('.uno'));
+	});
 
 	google.charts.load('current', {
 		packages: ['corechart']
@@ -231,6 +235,7 @@ function rellenarInformacion(elementoElegido) {
 			$('.acordeon #CuadroDuracion').text(dato[i].duracion);
 			$('.acordeon #CuadroEstreno').text(dato[i].estreno);
 			$('.acordeon #CuadroSinopsis').text(dato[i].sinopsis);
+			$('#MostrarHorarios')[0].innerHTML = '<h3>Horarios Disponibles: </h3>'+dato[i].horario;
 		}
 	}
 }
