@@ -1,6 +1,100 @@
 /* CSS GLOBAL*/
+/*
+Colores Primarios:
+blanco roto  	->  #EBF4F7
+rojo    		->  #E00B27
+azul oscuro 	->  #1A2A40 
+azul flojo		->	#2474A6
+amarillo 		->	#F2A30F
+*/
 
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	<!-- scroll-behavior: smooth;-->
+}
 
+body{
+	background-color: #1A2A40;
+	height: 100vh;
+}
+
+.sombra{
+	<!--sombras-->
+	-webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.75);
+}
+
+.estilosLetra{
+	font-family: 'Pacifico', cursive;
+}
+
+.cabecera{	
+	background-color:  #EBF4F7;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 10px;
+	justify-content:space-around;
+}
+
+.cabecera .titulo{
+	text-align: center;
+	display: flex;
+	align-items: center;
+}
+
+#logo{
+	width: 50px;
+	height: 50px;
+}
+
+.titulo a{
+	font-size: 2em;
+	margin-left: 10px;
+	color: 	#F2A30F;
+	text-decoration: none;
+	letter-spacing: 2px;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+.cabecera .nav{
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.cabecera .nav a{
+	margin: 5px;
+	border-radius: 5px;
+	text-decoration: none;
+	width: 100px;   
+    border: 2px solid #1A2A40;
+    color: #E00B27;
+    padding: 5px;
+}
+
+.cabecera .nav a:nth-child(2){¡
+	border: 2px solid;    
+    background-color: #F2A30F;
+    border: 2px solid #1A2A40;
+    color: black;
+}
+
+.footer{
+	display: flex;
+	justify-content: center;
+	background-color: #EBF4F7;
+	margin-top: 10px;
+	box-shadow: -1px 5px 10px black;
+}
+
+.footer img{
+	margin: 5px;
+	width: 50px;
+	height: 50px;
+}
 
 /* CSS DE LA SALA*/
 .bloque{
