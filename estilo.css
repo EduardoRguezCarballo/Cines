@@ -204,6 +204,7 @@ body{
 #charts{
 	overflow: hidden;
 	padding: 0;	
+	background-color: white;
 }
 
 .informacion .BtnCerrar{
@@ -237,10 +238,7 @@ body{
 .uno{
 	display: flex;
 	flex-wrap: wrap;
-}
-
-.uno > img{
-	width: 300px;
+	justify-content: space-around;
 }
 
 .uno > p{
@@ -314,7 +312,7 @@ body{
 
 #imagenCartel{
 	width: 100%;
-	max-width: 250px;
+	max-width: 300px;
 }
 
 #CuadroImg{
