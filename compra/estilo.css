@@ -96,86 +96,36 @@ body{
 	height: 50px;
 }
 
-/* CSS DE LA SALA*/
-.bloque{
-	width:400px;
-	margin: auto;
-	background: linear-gradient(to bottom, rgba(117,10,10,1) 0%, rgba(117,10,10,1) 6%, rgba(117,10,10,1) 21%, rgba(179,20,20,1) 68%, rgba(196,14,14,1) 100%);
-	box-shadow: 0px 0px 5px 4px;	
-	border-radius: 0px 0px 7px 7px;
-}
-
-#guardar{
-	text-align: center;
-	padding-bottom: 5px;
-}
-
-#guardar input{
-	padding: 5px;
-	font-weight: bold;
-	box-shadow: 0px 0px 9px black;
-	border-radius: 7px;
-}
-
-#guardar input:hover{
-	transition: all .4s;
-	border-radius: 20px;
-}
-
-.pantalla{
-	border: 0.5px solid black;
-	border-bottom: 5px solid;
-	width: 70%;
-	height: 10px;
-	margin: 20px auto;
-	background-color: aliceblue;
-	border-radius: 50px 50px 30px 30px;
-}
-
-.mapa{	
-	border: 2px solid black;
-	width:400px;
-	margin: auto;
-	background-color: black;
-	color: white;	
-	display: flex;
-	justify-content: center;		
-	border-radius: 7px 7px 0px 0px;
-	box-shadow: 0px 0px 5px 2px black;	
-}
-
-.item{
-	padding: 5px;
-	width: 27%;
-	text-align: center;
-	font-weight: bold;
-	display: flex;
-	text-align: center;
-}
-
-.item span:nth-child(1){
-	display: block;
-	width: 20px;
-	height: 20px;
-}
-
-.item span{
-	display: block;
-	border-radius: 10px;
-	margin: 5px auto;
-}
-
-.item:nth-child(1) span:nth-child(1){
-	background-color: green;
-	color: green;
-}
-
-.item:nth-child(2) span:nth-child(1){
-	background-color: white;
-	color: white;
-}
-
-.item:nth-child(3) span:nth-child(1){
+/* formulario */
+#datos{
 	background-color: red;
-	color: red;
+}
+
+#datos >h1{
+	text-align: center;
+	padding: 5px;
+}
+
+#datos > #columna{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content:center;
+	align-items: center;
+}
+
+#columna > #cuadro{
+	width: 150px;
+	margin-right:5px;
+	text-align: center;
+}
+
+#columna > #cuadro > #cartel{
+	width: 100%;
+	height: 210px;
+}
+
+#columna > #gloqueForm{
+	width: 300px;	
+	height: 210px;
+	margin: 5px;
 }

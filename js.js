@@ -67,7 +67,25 @@ $(document).ready(function () {
 	});
 	
 	$('#redireccion').on('click', function(){
-		localStorage.setItem('bloque',$('.uno'));
+		
+		var	titulo =  $('#tituloPelicula')[0].textContent;
+		var	cartel = $('#imagenCartel')[0].src;
+		cartel = cartel.split('img')[1];
+		
+		var	horarios = $('#MostrarHorarios').find('.hora');
+		var horas = "";
+		for(var i= 0; i<horarios.length;i++){
+			if(i == horarios.length-1){
+				horas += horarios[i].textContent;
+			}else{
+				horas += horarios[i].textContent+'/';
+			}
+		}
+		
+		localStorage.setItem('titulo',titulo);
+		localStorage.setItem('cartel',cartel);
+		localStorage.setItem('horas',horas);
+		
 	});
 
 	google.charts.load('current', {
@@ -87,7 +105,7 @@ function montaJson() {
 			'duracion': '123 min',
 			'estreno': '16/02/18',
 			'sinopsis': 'En un inquietante laboratorio de alta seguridad, durante la Guerra Fría, se produce una conexión insólita entre dos mundos, aparentemente alejados. La vida de la solitaria Elisa, trabajadora del laboratorio, cambia por completo cuando descubre un experimento clasificado como secreto.',
-			'horario': '<ul><li>19:30</li><li>21:40</li><li>23:50</li></ul>'
+			'horario': '<ul><li class="hora">19:30</li><li class="hora">21:40</li><li class="hora">23:50</li></ul>'
 		},
 		{
 			'titulo': 'Black Panther',
@@ -99,7 +117,7 @@ function montaJson() {
 			'duracion': '134 min',
 			'estreno': '16/02/18',
 			'sinopsis': '\'Black Panther\' cuenta la historia de T\'Challa quien, después de los acontecimientos de \'Capitán América: Civil War\', vuelve a casa, a la nación de Wakanda, aislada y muy avanzada tecnológicamente, para ser proclamado Rey. Pero la reaparición de un viejo enemigo pone a prueba el temple de T\'Challa como Rey y Black Panther ya que se ve arrastrado a un conflicto que pone en peligro todo el destino de Wakanda y del mundo.',
-			'horario': '<ul><li>15:30</li><li>18:40</li><li>23:30</li></ul>'
+			'horario': '<ul><li class="hora">15:30</li><li class="hora">18:40</li><li class="hora">23:30</li></ul>'
 		},
 		{
 			'titulo': 'Yo, Tonya',
@@ -111,7 +129,7 @@ function montaJson() {
 			'duracion': '119 min.',
 			'estreno': '23/02/18',
 			'sinopsis': 'Tonya Harding (Margot Robbie) dominó el hielo con un estilo de patinaje totalmente único. También dominó los titulares por algo completamente diferente. "YO, TONYA" es, por momentos, un absurdo, trágico e hilarante retrato de la mujer en el centro del mayor escándalo en la historia del Deporte.',
-			'horario': '<ul>				<li>19:30</li>				<li>21:45</li>				<li>00:00</li>			</ul>'
+			'horario': '<ul>				<li class="hora">19:30</li>				<li class="hora">21:45</li>				<li class="hora">00:00</li>			</ul>'
 		},
 		{
 			'titulo': "Deber cumplido",
@@ -123,7 +141,7 @@ function montaJson() {
 			'duracion': '108 min',
 			'estreno': '16/02/18',
 			'sinopsis': "La película cuenta la historia de Adam Schumann (Miles Teller), un militar que regresa a casa tras cumplir con su servicio en el ejército norteamericano en Irak. Con su llegada, las cosas no serán fáciles ni para él ni para su familia ya que no logra encontrar la paz debido al trastorno de estrés post traumático que padece. Esto hará que integrarse a la sociedad se convierta en un camino muy difícil de alcanzar y, al mismo tiempo, estará obligado a afrontar los horribles recuerdos que le dejó la guerra.",
-			'horario': '<ul>	<li>15:30</li>				</ul>'
+			'horario': '<ul>	<li class="hora">15:30</li>				</ul>'
 		},
 		{
 			'titulo': "El cuaderno de Sara",
@@ -135,7 +153,7 @@ function montaJson() {
 			'duracion': '115 min.',
 			'estreno': '02/02/18',
 			'sinopsis': "Desde hace años Laura busca a su hermana Sara, desaparecida en medio de la selva del Congo. Ni la ONG para la que trabaja, ni la embajada tienen noticias de su paradero hasta que aparece una foto de Sara en un poblado minero del este del Congo. Laura decide viajar a Kampala para desde allí iniciar un peligroso viaje al corazón del África, un territorio dominado los señores de la guerra. Una aventura que la llevará hasta la más sucia, violenta y oculta trastienda de los poderes occidentales.",
-			'horario': '<ul><li>15:30</li></ul>'
+			'horario': '<ul><li class="hora">15:30</li></ul>'
 		},
 		{
 			'titulo': "C'est la vie!",
@@ -147,7 +165,7 @@ function montaJson() {
 			'duracion': '117 min.',
 			'estreno': '09/02/18',
 			'sinopsis': "Max ha organizado cientos de bodas durante años y ahora prepara una boda de lujo en un château francés del siglo XVIII. Ha coordinado todo para que la celebración sea un éxito: camareros, orquesta, menú, disc jockey, decoración floral... Pero el resultado pende de un hilo y cada momento de felicidad y emoción puede convertirse en desastre o caos. ¿A quién confiarías la fiesta más importante de tu vida?",
-			'horario': '<ul><li>21:55</li></ul>'
+			'horario': '<ul><li class="hora">21:55</li></ul>'
 		},
 		{
 			'titulo': "Cavernícola",
@@ -159,7 +177,7 @@ function montaJson() {
 			'duracion': '89 min',
 			'estreno': '02/02/18',
 			'sinopsis': "Dug, humano y Hognob, jabalí, son los protagonistas de esta nueva aventura de Aardman en la que dos civilizaciones, la de la Edad de Piedra y la de Bronce, compiten por hacerse hueco en la historia (mientras que por casualidad inventan el fútbol). Dug y Hognob tendrán que ayudar a su tribu, sorteando con gracia y astucia múltiples peligros y derrotando al malvado Lord Nooth para no perder su hogar.",
-			'horario': '<ul><li>12:30</li></ul>'
+			'horario': '<ul><li class="hora">12:30</li></ul>'
 		},
 		{
 			'titulo': "Cincuenta sombras liberadas",
@@ -171,7 +189,7 @@ function montaJson() {
 			'duracion': '101 min',
 			'estreno': '09/02/18',
 			'sinopsis': "Tercera entrega de la romántica, sensual, erótica y totalmente adictiva historia de la apasionada relación entre una estudiante universitaria y un joven multimillonario. En esta ocasión Anastasia y Christian se casan, pero Jack Hyde (Eric Johnson) continúa amenazando su relación.",
-			'horario': '<ul><li>15:30</li></ul>'
+			'horario': '<ul><li class="hora">15:30</li></ul>'
 		},
 		{
 			'titulo': "Coco",
@@ -183,7 +201,7 @@ function montaJson() {
 			'duracion': '109 min',
 			'estreno': '12/01/18.',
 			'sinopsis': 'A pesar de las desconcertantes tradiciones de su familia entre las que se encuentra la vieja prohibición de estar en contacto con la música, Miguel (voz de Anthony Gonzalez) sueña convertirse en un consumado éxito como su ídolo, Ernesto de la Cruz (voz de Benjamín Bratt). Desesperado por demostrar su talento, Miguel se encuentra en la impresionante y colorida Tierra de los Muertos siguiendo una misteriosa cadena de eventos. A lo largo del camino, conocerá al encantador y tramposo Héctor (voz de Gael García Bernal), y juntos emprenderán un viaje extraordinario para desvelar la verdad que hay detrás de la historia familiar de Miguel.',
-			'horario': '<ul><li>Sábado, domingo y festivos 12:30</li></ul>'
+			'horario': '<ul><li class="hora">Sábado, domingo y festivos 12:30</li></ul>'
 		},
 		{
 			'titulo': "El corredor del laberinto: La cura mortal",
@@ -195,7 +213,7 @@ function montaJson() {
 			'duracion': '142 min',
 			'estreno': '26/01/18',
 			'sinopsis': 'En este final épico de la saga Maze Runner, Thomas lidera su grupo de Gladers escapados de la última y difícil misión. Para salvar a sus amigos, deben entrar en la legendaria Last City, un laberinto controlado por WCKD que puede llegar a ser el laberinto más mortífero de todos. Cualquier persona que lo consiga pasar con vida obtendrá respuestas a las preguntas que los Gladers se han estado haciendo desde que llegaron por primera vez al laberinto.',
-			'horario': '<ul><li>15:15</li><li>17:30</li>		<li>20:15</li>	<li>22:30</li>			</ul>'
+			'horario': '<ul><li class="hora">15:15</li><li class="hora">17:30</li>		<li class="hora">20:15</li>	<li class="hora">22:30</li>			</ul>'
 		}
 	];
 }
