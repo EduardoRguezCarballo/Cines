@@ -82,50 +82,104 @@ body{
     color: black;
 }
 
-.footer{
-	display: flex;
-	justify-content: center;
-	background-color: #EBF4F7;
-	margin-top: 10px;
-	box-shadow: -1px 5px 10px black;
-}
-
-.footer img{
-	margin: 5px;
-	width: 50px;
-	height: 50px;
-}
-
 /* formulario */
-#datos{
-	background-color: red;
+.formulario{
+	width: 500px;
+	max-width: 100%;
+	margin: auto;
+	margin-top: 30px;
+	padding: 20px;
+	box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+	position: relative;
+	background-color: white;
+	z-index: 0;
 }
 
-#datos >h1{
+.formulario__titulo{
 	text-align: center;
-	padding: 5px;
+	margin-top: 0;
+	color: #1A2A40 ;
+	margin-bottom: 27px;
 }
 
-#datos > #columna{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content:center;
-	align-items: center;
+.formulario__input, .formulario__label, .formulario__submit{
+	display: block;
+	width: 100%;	
+	font-size: 1.3em;
 }
 
-#columna > #cuadro{
-	width: 150px;
-	margin-right:5px;
-	text-align: center;
+.formulario__input{
+	padding: 7px;
+	border: none;
+	border-bottom: 2px solid rgba(0,0,0,0.3);
+	margin-bottom: 35px;
+	background-color: transparent;
+	z-index: 2;
 }
 
-#columna > #cuadro > #cartel{
+.formulario__label{
+	padding-left: 15px;
+	position: absolute;
+	margin-top: -67px;
+	z-index: -1;
+	color: #1A2A40;
+	transition: all .2s;
+}
+
+.formulario__submit{
+	background: #1A2A40;
+	color: white;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+
+.formulario__submit:hover{
+	transition: all .2s;
+	background: #F2A30F;
+}
+
+/*animaciones*/
+.formulario__input:focus{
+	border-color:#F2A30F;
+	outline: none;
+}
+
+.formulario__input:focus + .formulario__label{
+	margin-top: -100px;
+}
+
+.fijar{
+	margin-top: -100px;
+}
+
+/* formulario cliente*/
+
+.cabeza{
+	display: block;
+	width: 100%;	
+	font-size: 1.3em;
+	color:white;
+	padding: 7px;
+	background-color: #2474A6;
+	border:1px solid rgba(0,0,0,0.3);
+}
+
+#titulo, #fecha, #TipoEntrada, #Hora{
+	display: block;
 	width: 100%;
-	height: 210px;
+	margin-bottom: 20px;
+	padding: 7px;
+	padding-left: 15px;
+	font-size: 1.3em;
+	border: 0.5px solid rgba(0,0,0,0.1);
+	outline: none;
 }
 
-#columna > #gloqueForm{
-	width: 300px;	
-	height: 210px;
-	margin: 5px;
+#TipoEntrada:hover, #Hora:hover{
+	transition: all .2s;
+	background: rgba(0,0,0,0.1);
 }
+
+
+
+

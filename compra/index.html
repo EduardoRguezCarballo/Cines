@@ -41,7 +41,52 @@
 		</div>
 	</div>
 
-	<div id="formulario">
+	<form action="" class="formulario">	
+
+		<div class="datos__pelicula">
+			<h1 class="formulario__titulo">Datos de la película</h1>
+			
+			<label class="cabeza">Título de la película</label>
+			<label id="titulo">CACA</label>
+
+			<label class="cabeza">Fecha</label>
+			<label id="fecha">232323</label>
+
+			<label class="cabeza">Horarios</label>
+			<select id="Hora"></select>
+
+			<label class="cabeza">Tipo de entrada</label>
+			<select id="TipoEntrada">
+				<option value="6.0">Adulto 6€</option>
+				<option value="4.5">Jover 4.5€</option>
+				<option value="3.0">niño 3€</option>
+			</select>
+			
+			<input type="button" class="formulario__submit" id="mostrarDatosPelicula" value="Siguiente">
+			<br>
+			<input type="button" class="formulario__submit" id="volverIndex" value="Volver">
+		</div>
+
+		<div class="datos__usuario">
+			<h1 class="formulario__titulo">Información Del Contacto</h1>
+			<input type="text" class="formulario__input">
+			<label for="" class="formulario__label">Nombre:</label>
+
+			<input type="text" class="formulario__input">
+			<label for="" class="formulario__label">Apellidos:</label>
+
+			<input type="email" class="formulario__input">
+			<label for="" class="formulario__label">Correo</label>
+
+			<input type="button" class="formulario__submit" id="SeleccionarButacas" value="Seleccionar Butacas">
+			<br>
+			<input type="button" class="formulario__submit" id="VolverDatosPelicula" value="Volver">
+		</div>
+	</form>
+</body>
+</html>
+
+<!--<div id="formulario">
 		<div id="datos">
 			<h1>Compra y Reserva de entradas</h1>
 			<div id="columna">
@@ -67,21 +112,7 @@
 			</div>
 		</div>
 	</div>
-</body>
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
-<!--
+	
 <div class="elegir_asientos">
 		<div class="mapa">
 			<div class="item"><span> </span> <span>Reservago</span></div>
