@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="sp">
-	<head>
+
+<head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Cines</title>
 
@@ -12,20 +13,6 @@
 	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
 	<script src="../toast/jquery.toast.js"></script>
 	<script src="javaScript.js"></script>
-
-	<style>
-		.reservado {
-			fill: green;
-		}
-
-		.libre {
-			fill: white;
-		}
-
-		.ocupado {
-			fill: red;
-		}
-	</style>
 </head>
 
 <body>
@@ -41,11 +28,10 @@
 		</div>
 	</div>
 
-	<form action="" class="formulario">	
-
+	<form action="" class="formulario">
 		<div class="datos__pelicula">
 			<h1 class="formulario__titulo">Datos de la película</h1>
-			
+
 			<label class="cabeza">Título de la película</label>
 			<label id="titulo">CACA</label>
 
@@ -61,96 +47,31 @@
 				<option value="4.5">Jover 4.5€</option>
 				<option value="3.0">niño 3€</option>
 			</select>
-			
+
 			<input type="button" class="formulario__submit" id="mostrarDatosPelicula" value="Siguiente">
-			<br>
-			<input type="button" class="formulario__submit" id="volverIndex" value="Volver">
 		</div>
 
 		<div class="datos__usuario">
 			<h1 class="formulario__titulo">Información Del Contacto</h1>
-			<input type="text" class="formulario__input">
+			<input type="text" class="formulario__input" id="nombre">
 			<label for="" class="formulario__label">Nombre:</label>
 
-			<input type="text" class="formulario__input">
+			<input type="text" class="formulario__input" id="apellidos">
 			<label for="" class="formulario__label">Apellidos:</label>
 
-			<input type="email" class="formulario__input">
+			<input type="email" class="formulario__input" id="email">
 			<label for="" class="formulario__label">Correo</label>
 
 			<input type="button" class="formulario__submit" id="SeleccionarButacas" value="Seleccionar Butacas">
 			<br>
-			<input type="button" class="formulario__submit" id="VolverDatosPelicula" value="Volver">
+			<input type="button" class="formulario__submit" id="VolverDatosPelicula" value="Volver Atrás">
 		</div>
+		 <br>
+		<input type="button" class="formulario__submit" id="volverIndex" value="Salir">
 	</form>
+	
+	<div class="sala">
+		
+	</div>
 </body>
 </html>
-
-<!--<div id="formulario">
-		<div id="datos">
-			<h1>Compra y Reserva de entradas</h1>
-			<div id="columna">
-				<div id="cuadro"><img src="" alt="cartel" id="cartel"></div>
-				<div id="gloqueForm">
-					<span>Película:</span><span id="titulo"></span><br>
-					
-					<span>Fecha:</span><span id="fecha"></span><br>
-					
-					<span>Horario:</span><br>
-					<select id="Hora"></select><br>
-					
-					<span>Tipo de entrada:</span><br> 					
-					<select id="TipoEntrada">
-						<option value="6.0">Adulto</option>
-						<option value="4.5">Jover</option>
-						<option value="3.0">niño</option>
-					</select><br>
-					
-					<input type="button" id="next" value="Siguiente">
-				</div>
-				
-			</div>
-		</div>
-	</div>
-	
-<div class="elegir_asientos">
-		<div class="mapa">
-			<div class="item"><span> </span> <span>Reservago</span></div>
-			<div class="item"><span> </span> <span>Libre</span></div>
-			<div class="item"><span> </span> <span>Ocupado</span></div>
-		</div>
-		<div class="bloque">
-			<svg width="400" height="400" id="mapa">		
-				<symbol id="sym01" viewBox="0 0 250 250">	
-						
-	 			<!-- sombra espaldar y espaldar	
-				<rect x=20 y=45 rx=5 ry=1225 width=70 height=50 fill="black"/>				
-				<rect x=15 y=50 rx=5 ry=1225 width=70 height=50 stroke="black" stroke-width="1.5" />
-								
-				<!-- sombra del asiento	 
-				<rect x=20 y=98 rx=5 ry=10 width=70 height=20 fill="black"/>				
-				
-				<!--sombra del cojin y el cojin
-				<ellipse cx="52" cy="98" rx="40" ry="10" stroke="black" fill="#555555"/>
-				<ellipse cx="50" cy="100" rx="40" ry="10" stroke="black" stroke-width="1.5" fill="#530103"/>
-				
-				<!-- asiento 
-				<rect x=15 y=100 rx=5 ry=10 width=70 height=20 stroke="black" stroke-width="1.5"/>	
-				
-				<!-- sombra y posamanos izquierdo  
-				<rect x=6 y=67 rx=5 ry=10 width=20 height=35 fill="black"/>
-				<rect x=3 y=70 rx=5 ry=10 width=20 height=35 stroke="black" stroke-width="1.5"/>
-								
-				<!-- sombra y posamanos derecho  
-				<rect x=78 y=67 rx=5 ry=10 width=20 height=35 fill="black"/>
-				<rect x=75 y=70 rx=5 ry=10 width=20 height=35 stroke="black" stroke-width="1.5"/>
-				
-			</symbol>
-				<use x="0" y="0" class="disponible"></use>
-			</svg>
-			<div class="pantalla" title="pantalla"> </div>
-			<div id="guardar">
-				<input class="Gboton" type="submit" value="Guardar" />
-			</div>
-		</div>
-	</div>-->

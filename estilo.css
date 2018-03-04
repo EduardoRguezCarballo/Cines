@@ -237,6 +237,7 @@ body{
 .uno{
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-around;
 }
 
 .uno > img{

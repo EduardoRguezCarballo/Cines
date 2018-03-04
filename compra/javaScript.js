@@ -1,5 +1,6 @@
 var myJSON;
 var pelicula;
+var reserva;
 
 $(document).ready(function () {
 	
@@ -57,7 +58,18 @@ function cargar() {
 }
 
 function mostrarButacas(){
-	alert()
+	reserva = {
+		'fecha': $('#fecha')[0].textContent,
+		'Titulo': $('#titulo')[0].textContent,
+		'Horario': $('#Hora')[0].value,
+		'Precio': $('#TipoEntrada')[0].value,
+		'nombre': $('#nombre')[0].value,
+		'apellidos': $('#apellidos')[0].value,
+		'correo': $('#email')[0].value,
+		'butacas': '3'
+	};
+	
+	$('.formulario').hide();
 }
 
 function mensaje(cabecera, texto) {
