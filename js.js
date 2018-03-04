@@ -222,8 +222,7 @@ function mostrarDatos() {
 	for (var i = 0; i < dato.length; i++) {
 		var elemento = `<div class="cartel sombra">
 			<img src="img/${dato[i].imagen}" alt="${dato[i].titulo}">
-			<h3 tabindex="0">${dato[i].titulo}</h3>
-			<h4>Horários Disponibles</h4>
+			<h3 tabindex="0">${dato[i].titulo}</h3>		
 			${dato[i].horario}
 			<input id="${dato[i].titulo}" class="botonMotrar" type="submit" value="Ver mas Datos" tabindex="0">
 		</div>`;

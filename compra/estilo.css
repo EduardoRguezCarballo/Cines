@@ -58,7 +58,6 @@ body{
 	letter-spacing: 2px;
 	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
-
 .cabecera .nav{
 	text-align: center;
 	display: flex;
@@ -164,7 +163,7 @@ body{
 	border:1px solid rgba(0,0,0,0.3);
 }
 
-#titulo, #fecha, #TipoEntrada, #Hora{
+#titulo, #fecha, #TipoEntrada, #Hora, .info{
 	display: block;
 	width: 100%;
 	margin-bottom: 20px;
@@ -200,11 +199,30 @@ body{
 	padding-top: 100px;
 }
 
-.silla{
-	width: 13%;
+#silla{
+	width: 16%;
 	height: 50px;
-	margin-bottom: 9px;
+	margin-bottom: 8.5px;
 }
 
+.reservado{
+	background-color: #0875BA;
+}
 
+.nodisponible{
+	background-color: #930101;
+}
 
+.disponible{
+	background-color: green;
+}
+
+.factura{	
+	width: 500px;
+	max-width: 100%;
+	margin: auto;
+	margin-top: 30px;
+	padding: 20px;
+	box-shadow: 0 0 20px 1px rgba(0,0,0,0.3);
+	background-color: white;
+}

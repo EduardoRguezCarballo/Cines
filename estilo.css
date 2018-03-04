@@ -67,10 +67,12 @@ body{
 	margin: 5px;
 	border-radius: 5px;
 	text-decoration: none;
-	width: 100px;   
+	width: 100px;
     border: 2px solid #1A2A40;
     color: #E00B27;
     padding: 5px;
+	font-weight: bold;
+	padding-top: 10px;
 }
 
 .cabecera .nav a:nth-child(2){¡
@@ -124,7 +126,7 @@ body{
 	padding: 2px;
 	margin-bottom: 5px;
 	margin-top: -6px;
-	background-color: #F2A30F;
+	color:white;
 }
 
 .cartelera .cartel > ul, #MostrarHorarios > ul{
@@ -227,6 +229,10 @@ body{
 	background-color: #1A2A40;
 	border: 0.5px solid black;
 	color: white;
+}
+
+.tituloA:hover{
+	cursor: pointer;
 }
 
 .acordeon div{
